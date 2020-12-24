@@ -13,7 +13,7 @@ Anyone interested in doing Interpretable NLP in SPOC lab.
 
 ## Topics to be included  
 
-0. **Introduction**  
+1. **Introduction**  
     *Why should we care about interpretable NLP?*  
     - We want to build NLP systems with better performance.  
       - Understand the blackbox systems, empirically and theoretically  
@@ -31,7 +31,8 @@ Anyone interested in doing Interpretable NLP in SPOC lab.
     - Related material: ACL 2020 tutorial [Interpretability and Analysis in Neural NLP](https://sebastiangehrmann.com/assets/files/acl_2020_interpretability_tutorial.pdf)  
     - Related material: EMNLP 2020 tutorial [Interpreting Predictions of NLP Models](https://github.com/Eric-Wallace/interpretability-tutorial-emnlp2020)  
 
-1. **Background: language modeling, DNNs in NLP**  
+
+2. **Background: language modeling, DNNs in NLP**  
     - Word embedding, language models, neural language models  
     - Previous approaches of word embeddings: SVD (latent semantic analysis)  
     - Neural probabilistic LMs (Bengio 2003)  
@@ -41,7 +42,7 @@ Anyone interested in doing Interpretable NLP in SPOC lab.
     - On losses for modern neural LMs [(Aroca-Ouellette and Rudzicz, 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.403/) 
 
 
-2. **Background: Interpretability, explainable AI**  
+3. **Background: Interpretability, explainable AI**  
     - Review / positional papers:
       - The mythos of model interpretability [(Lipton, 2016)](https://arxiv.org/abs/1606.03490)  
       - A diagnostic study of explainability techniques for text classification [(Atanasova et al., 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.263)  
@@ -56,7 +57,7 @@ Anyone interested in doing Interpretable NLP in SPOC lab.
 
     <!--3. Can I beg Frank to give a guest lecture here? (E.g., Interpretability and surgical safety?) -->  
 
-3. **Topic: The geometry of embeddings**
+4. **Topic: The geometry of embeddings**
     - Linear analogy  
       - The promising story (linear analogy) of Mikolov word2vec, and subsequent debates re: whether this is true  
       - GloVe, and then Kawin's linear analogy paper  
@@ -67,7 +68,7 @@ Anyone interested in doing Interpretable NLP in SPOC lab.
     - Visualizing and measuring the geometry of BERT [(Reif et al., 2019)](https://papers.nips.cc/paper/2019/hash/159c1ffe5b61b41b3c4d8f4c2150f6c4-Abstract.html) 
 
 
-4. **Topic: Diagnostic classifiers**  
+5. **Topic: Diagnostic classifiers**  
     - [(Alain and Bengio 2017)](https://arxiv.org/abs/1610.01644): linear classifier as diagnostic classifiers  
     - [(Ettinger 2016)](https://www.aclweb.org/anthology/W16-2524/): Probing for semantic evidence of composition by means of simple classification tasks  
     - Various probing papers: "what to probe for"
@@ -80,16 +81,17 @@ Anyone interested in doing Interpretable NLP in SPOC lab.
       - [(Voita and Titov 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.14/) Probe with minimum description length.  
 
 
-5. **Topic: Psycholinguistic tests on NLP models**
+6. **Topic: Psycholinguistic tests on NLP models**
     - Colorless green RNNs dream hierarchically [(Gulordava et al., 2018)](https://www.aclweb.org/anthology/N18-1108/)  
     - Targeted syntactic evaluation of language models [(Marvin & Linzen, 2018)](https://www.aclweb.org/anthology/D18-1151/)  
     - BLiMP: The benchmark of linguistic minimal pairs for English [(Warstadt et al., 2020)](https://www.mitpressjournals.org/doi/full/10.1162/tacl_a_00321)  
     - What BERT is not: Lessons from a New Suite of Psycholinguistic Diagnostics for Language Models [(Ettinger, 2020)](https://www.mitpressjournals.org/doi/full/10.1162/tacl_a_00298)  
     - Investigating the linguistic knowledge of NLP models [(Bacon, 2020)](https://escholarship.org/uc/item/7tk21797)    
-    - When is BERT surprised? (**TODO**, 2021)  
+    - Climbing towards NLU [(Bender and Koller, 2020)](https://www.aclweb.org/anthology/2020.acl-main.463/)  
+    - When is BERT surprised? (2021)  
 
 
-6. **Topic: Spurious correlations, shortcut learning**    
+7. **Topic: Spurious correlations, shortcut learning**    
     - The "right for the wrong reasons" problem
       - Right for the wrong reasons: diagnosing syntactic heuristics in natural language inference [(McCoy et al., 2019)](https://www.aclweb.org/anthology/P19-1334/)  
       - [(Niven and Kao, 2019)](https://www.aclweb.org/anthology/P19-1459/)  
@@ -100,7 +102,7 @@ Anyone interested in doing Interpretable NLP in SPOC lab.
       - Prepare models against shortcuts by fitting the residual [(He et al., 2019)](https://arxiv.org/abs/1908.10763)  
 
 
-7. **Topic: Influence of samples, understanding the datasets**  
+8. **Topic: Influence of samples, understanding the datasets**  
     - Saliency maps: how does each data sample affect the model predictions? (Hard to compute)  
     - Influence function: which sample would change the prediction the most, if removed?  
       - Understanding Black-box Predictions via Influence Functions [(Koh and Liang, 2017)](https://arxiv.org/abs/1703.04730)  
@@ -113,23 +115,14 @@ Anyone interested in doing Interpretable NLP in SPOC lab.
     - Other methods to understand the datasets:  
       - Dataset cartography: mapping and diagnosing datasets with training dynamics [(Swayamdipta et al., 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.746/)  
       - With little power comes great responsibility [(Card et al., 2020)](https://arxiv.org/abs/2010.06595)  
-      - Use task-specific information to describe the difficulty of the classification datasets (TODO, 2021)  
+      - Use task-specific information to describe the difficulty of the classification datasets (2021)  
 
 
-8. **Topic: Rationales in classification**  
+9. **Topic: Rationales in classification**  
     - Dataset: e-SNLI [(Camburu et al., 2018)](https://arxiv.org/abs/1812.01193)  
     - Generating plausible counterfactual explanations with deep transformers in financial text classification [(Yang et al., 2020)](https://arxiv.org/abs/2010.12512)  
     - Towards explainable NLP: A generative explanation framework for text classification [(Liu et al., 2019)](https://www.aclweb.org/anthology/P19-1560/)  
     - Evaluating and characterizing human rationales [(Carton et al., 2020)](aclweb.org/anthology/2020.emnlp-main.747/)  
-
-
-9.  **Topic: Connection to Fairness, Accountability, Trustworthiness (FAccT)**  
-    - Unveiling and mitigating the bias in language models  
-    - Bolukbasi's paper. 
-    - Jieyu Zhao's papers. 
-    - Yulia Tsevkov's papers. 
-    - The fairness-accuracy tradeoff?   
-    - **TODO**  
 
 
 10. **Topic: Causal interpretations**  
@@ -141,18 +134,24 @@ Anyone interested in doing Interpretable NLP in SPOC lab.
     - A causal framework for explaining the predictions of black-box S2S models [(Alvarez-Melis and Jaakkola, 2017)](https://www.aclweb.org/anthology/D17-1042/)  
     - Deconfounding lexicon inductions for interpretable social science [(Pryzant et al., 2018)](https://www.aclweb.org/anthology/N18-1146/)  
 
-11. **Topic: OOD generalization**
-    - Certified robustness to adversarial word substitutions [(Jia et al., 2019)](https://arxiv.org/abs/1909.00986)  
-    - [How can we accelerate progress towards human-like language generalization?](https://www.aclweb.org/anthology/2020.acl-main.465/)  
-    - TODO  
 
-
-12. **Optional topic: Theoretical interpretations**  
+11. **Topic: Theoretical interpretations**  
     - RNNs as weighted language recognizers [(Chen et al., 2018)](https://www.aclweb.org/anthology/N18-1205/)  
     - Theoretical limitations of self-attentions [(Hahn, 2020)](https://www.mitpressjournals.org/doi/full/10.1162/tacl_a_00306)  
     - A formal hierarchy of RNN architectures [(Merrill et al., 2020)](https://arxiv.org/abs/2004.08500)  
     - TODO - connections to Learning theory?  
 
 
-13. **Future**   
-    - Climbing up the ladders of NLU (Bender and Koller, 2020)  
+12. **Connections to Fairness, Accountability, Trustworthiness (FAccT)**  
+    - Unveiling and mitigating the bias in language models  
+    - Bolukbasi's paper. 
+    - Jieyu Zhao's papers. 
+    - Yulia Tsevkov's papers. 
+    - The fairness-accuracy tradeoff?   
+    - **TODO**  
+
+
+13. **Connections to OOD generalization**
+    - Certified robustness to adversarial word substitutions [(Jia et al., 2019)](https://arxiv.org/abs/1909.00986)  
+    - [How can we accelerate progress towards human-like language generalization?](https://www.aclweb.org/anthology/2020.acl-main.465/)  
+    - TODO  
