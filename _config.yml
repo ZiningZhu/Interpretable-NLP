@@ -21,7 +21,7 @@
 title: Interpretable NLP
 email: zining@cs.toronto.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  In this repo, I try to collect some reading materials about interpretable natural languages processing researches. 
+  
 baseurl: "/Interpretable-NLP" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
