@@ -15,14 +15,14 @@ Anyone interested in doing Interpretable NLP in SPOC lab.
 
 0. **Introduction**  
     *Why should we care about interpretable NLP?*  
-    - Want to build NLP systems with better performances  
+    - We want to build NLP systems with better performance.  
       - Understand the blackbox systems, empirically and theoretically  
       - Leverage language as a resource: which linguistic knowledge do the systems have?  
-    - Want to build NLP systems that deploy well in the society  
+    - We want to build NLP systems that deploy well in the society.  
       - Early experiment e.g., the HitchBot project (2013-2015): dealing with real people is hard.  
       - Fairness, accountability, and trustworthiness (FAccT). E.g., [On the danger of stochastic parrots](https://www.technologyreview.com/2020/12/04/1013294/google-ai-ethics-research-paper-forced-out-timnit-gebru/)  
       - SoTA, even commercial models are far from perfect yet, according to [Checklist](https://www.aclweb.org/anthology/2020.acl-main.442/)  
-      - Want to make the "goodness" criteria more useful: ["Utility is in the users' eyes"](https://www.aclweb.org/anthology/2020.emnlp-main.393/)    
+      - Develop more useful "goodness" criteria: ["Utility is in the users' eyes"](https://www.aclweb.org/anthology/2020.emnlp-main.393/)    
 
     *What do interpretable NLP researches include?*  
     - Mainly about the ACL/EMNLP/NAACL track "Interpretability and analysis of NLP models"  
@@ -45,14 +45,14 @@ Anyone interested in doing Interpretable NLP in SPOC lab.
     - Review / positional papers:
       - The mythos of model interpretability [(Lipton, 2016)](https://arxiv.org/abs/1606.03490)  
       - A diagnostic study of explainability techniques for text classification [(Atanasova et al., 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.263)  
-    - Post-hoc, local, linear interpretations (Ribeiro 2016, LIME)  
-    - SHAP (SHapley Additive exPlanations): a game theoretic approach to explain the output of a model  
+    - Post-hoc, local, linear interpretations [(Ribeiro 2016, LIME)](https://arxiv.org/abs/1602.04938)  
+    - SHAP (SHapley Additive exPlanations): a game theoretic approach to explain the output of a model. [paper](https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html) [SHAP package](https://shap.readthedocs.io/en/latest/)   
     - Explain by attention / heatmaps:
-      - Attention is not explanation  
-      - Attention is not not explanation  
+      - Attention is not explanation [(Jain and Wallace, 2019)](https://arxiv.org/abs/1902.10186)  
+      - Attention is not not explanation [(Wiegreffe and Pinter, 2019)](https://arxiv.org/abs/1908.04626)  
     - Explain with CCA:  
-      - Deep-CCA  
-      - SVCCA  
+      - Deep-CCA [(Andrew et al., 2013)](https://ttic.uchicago.edu/~klivescu/papers/andrew_icml2013.pdf)    
+      - SVCCA: singular vector canonical correlation analysis for deep learning dynamics and interpretability [(Raghu et al., 2017)](https://arxiv.org/abs/1706.05806)  
 
     <!--3. Can I beg Frank to give a guest lecture here? (E.g., Interpretability and surgical safety?) -->  
 
@@ -66,34 +66,39 @@ Anyone interested in doing Interpretable NLP in SPOC lab.
       - Analyzing the (an-)isotropy in contextualized word representations [(Ethayarajh, 2019)](https://www.aclweb.org/anthology/D19-1006/)  
     - Visualizing and measuring the geometry of BERT [(Reif et al., 2019)](https://papers.nips.cc/paper/2019/hash/159c1ffe5b61b41b3c4d8f4c2150f6c4-Abstract.html) 
 
+
 4. **Topic: Diagnostic classifiers**  
-    - (Alain and Bengio 2017): linear classifier as diagnostic classifiers  
-    - (Ettinger 2016): Diagnostic classification to query linguistic knowledge  
+    - [(Alain and Bengio 2017)](https://arxiv.org/abs/1610.01644): linear classifier as diagnostic classifiers  
+    - [(Ettinger 2016)](https://www.aclweb.org/anthology/W16-2524/): Probing for semantic evidence of composition by means of simple classification tasks  
     - Various probing papers: "what to probe for"
-      - (Hewitt Manning 2019): Finding syntax in LMs  
-      - (Tenney et al., 2019): BERT rediscovers traditional NLP pipeline  
+      - [(Hewitt Manning 2019)](https://www.aclweb.org/anthology/N19-1419/): A structural probe for finding syntax in word representations  
+      - [(Tenney et al., 2019)](https://arxiv.org/abs/1905.05950): BERT rediscovers traditional NLP pipeline  
     - Developing the methods for probing: "how to probe"
-      - (Hewitt & Liang 2019) the "good probe or good representations" dichotomy  
-      - (Pimentel et al 2020) an information theoretic framework  
-      - (Zhu and Rudzicz 2020) an information theoretic explanation for the dichotomy. Limitations of diagnostic classifier probing.  
-      - (Voita and Titov 2020) Probe with minimum description length.  
+      - [(Hewitt & Liang 2019)](https://www.aclweb.org/anthology/D19-1275/) the "good probe or good representations" dichotomy  
+      - [(Pimentel et al 2020)](https://www.aclweb.org/anthology/2020.acl-main.420/) an information theoretic framework  
+      - [(Zhu and Rudzicz 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.744/) an information theoretic explanation for the dichotomy. Limitations of diagnostic classifier probing.  
+      - [(Voita and Titov 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.14/) Probe with minimum description length.  
+
 
 5. **Topic: Psycholinguistic tests on NLP models**
     - Colorless green RNNs dream hierarchically [(Gulordava et al., 2018)](https://www.aclweb.org/anthology/N18-1108/)  
-    - Marvin & Linzen, 2018  
-    - BLiMP  
-    - What BERT is not: Lessons from a New Suite of Psycholinguistic Diagnostics for Language Models [(Ettinger, 2020)](https://transacl.org/ojs/index.php/tacl/article/view/1852)  
+    - Targeted syntactic evaluation of language models [(Marvin & Linzen, 2018)](https://www.aclweb.org/anthology/D18-1151/)  
+    - BLiMP: The benchmark of linguistic minimal pairs for English [(Warstadt et al., 2020)](https://www.mitpressjournals.org/doi/full/10.1162/tacl_a_00321)  
+    - What BERT is not: Lessons from a New Suite of Psycholinguistic Diagnostics for Language Models [(Ettinger, 2020)](https://www.mitpressjournals.org/doi/full/10.1162/tacl_a_00298)  
     - Investigating the linguistic knowledge of NLP models [(Bacon, 2020)](https://escholarship.org/uc/item/7tk21797)    
     - When is BERT surprised? (**TODO**, 2021)  
 
+
 6. **Topic: Spurious correlations, shortcut learning**    
-    - Right for the wrong reasons. The HANS dataset (McCoy et al., 2019)  
-    - (Niven and Kao, 2019)  
-    - This "shortcut learning" problem happens in multiple scenarios (Geirhos et al., 2020)  
-    - Empirical evidence to spurious correlations [(Tu et al., 2020)](https://arxiv.org/abs/2007.06778)  
-    - Prepare models against shortcuts by challenging datasets [(Gardner et al., 2020)](https://arxiv.org/abs/2004.02709), [(Kaushik et al., 2020)](https://openreview.net/forum?id=Sklgs0NFvr)
-    - Prepare models against shortcuts by fitting the residual [(He et al., 2019)](https://arxiv.org/abs/1908.10763)  
-    - Task-specific information (**TODO**, 2021)  
+    - The "right for the wrong reasons" problem
+      - Right for the wrong reasons: diagnosing syntactic heuristics in natural language inference [(McCoy et al., 2019)](https://www.aclweb.org/anthology/P19-1334/)  
+      - [(Niven and Kao, 2019)](https://www.aclweb.org/anthology/P19-1459/)  
+      - This "shortcut learning" problem happens in multiple scenarios (Geirhos et al., 2020)  
+      - Empirical evidence to spurious correlations [(Tu et al., 2020)](https://arxiv.org/abs/2007.06778)  
+    - How to solve this problem?
+      - Prepare models against shortcuts by challenging datasets [(Gardner et al., 2020)](https://arxiv.org/abs/2004.02709), [(Kaushik et al., 2020)](https://openreview.net/forum?id=Sklgs0NFvr)
+      - Prepare models against shortcuts by fitting the residual [(He et al., 2019)](https://arxiv.org/abs/1908.10763)  
+
 
 7. **Topic: Influence of samples, understanding the datasets**  
     - Saliency maps: how does each data sample affect the model predictions? (Hard to compute)  
@@ -108,6 +113,7 @@ Anyone interested in doing Interpretable NLP in SPOC lab.
     - Other methods to understand the datasets:  
       - Dataset cartography: mapping and diagnosing datasets with training dynamics [(Swayamdipta et al., 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.746/)  
       - With little power comes great responsibility [(Card et al., 2020)](https://arxiv.org/abs/2010.06595)  
+      - Use task-specific information to describe the difficulty of the classification datasets (**TODO**, 2021)  
 
 
 8. **Topic: Rationales in classification**  
@@ -123,6 +129,7 @@ Anyone interested in doing Interpretable NLP in SPOC lab.
     - Jieyu Zhao's papers. 
     - Yulia Tsevkov's papers. 
     - The fairness-accuracy tradeoff?   
+    - **TODO**  
 
 
 10. **Topic: Causal interpretations**  
@@ -137,14 +144,14 @@ Anyone interested in doing Interpretable NLP in SPOC lab.
 11. **Topic: OOD generalization**
     - Certified robustness to adversarial word substitutions [(Jia et al., 2019)](https://arxiv.org/abs/1909.00986)  
     - [How can we accelerate progress towards human-like language generalization?](https://www.aclweb.org/anthology/2020.acl-main.465/)  
-    - **TODO**
+    - TODO  
 
 
 12. **Optional topic: Theoretical interpretations**  
     - RNNs as weighted language recognizers [(Chen et al., 2018)](https://www.aclweb.org/anthology/N18-1205/)  
     - Theoretical limitations of self-attentions [(Hahn, 2020)](https://www.mitpressjournals.org/doi/full/10.1162/tacl_a_00306)  
     - A formal hierarchy of RNN architectures [(Merrill et al., 2020)](https://arxiv.org/abs/2004.08500)  
-    - Learning theory?
+    - TODO - connections to Learning theory?  
 
 
 13. **Future**   
