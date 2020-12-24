@@ -2,7 +2,7 @@
 layout: default
 ---
 
-In this repo, I try to collect some reading materials about interpretable natural languages processing researches. 
+In this repo, I try to collect some reading material about interpretable natural languages processing research. 
 
 ## Goal  
 - Draw a picture about hot research topics in Interpretable NLP.   
@@ -24,7 +24,7 @@ Anyone interested in doing Interpretable NLP in SPOC lab.
       - SoTA, even commercial models are far from perfect yet, according to [Checklist](https://www.aclweb.org/anthology/2020.acl-main.442/)  
       - Develop more useful "goodness" criteria: ["Utility is in the users' eyes"](https://www.aclweb.org/anthology/2020.emnlp-main.393/)    
 
-    *What do interpretable NLP researches include?*  
+    *What do interpretable NLP research include?*  
     - Mainly about the ACL/EMNLP/NAACL track "Interpretability and analysis of NLP models"  
     - BlackboxNLP workshop  
     - Connection to: FAccT, theory, psycholinguistics, ML4H  
@@ -113,7 +113,7 @@ Anyone interested in doing Interpretable NLP in SPOC lab.
     - Other methods to understand the datasets:  
       - Dataset cartography: mapping and diagnosing datasets with training dynamics [(Swayamdipta et al., 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.746/)  
       - With little power comes great responsibility [(Card et al., 2020)](https://arxiv.org/abs/2010.06595)  
-      - Use task-specific information to describe the difficulty of the classification datasets (**TODO**, 2021)  
+      - Use task-specific information to describe the difficulty of the classification datasets (TODO, 2021)  
 
 
 8. **Topic: Rationales in classification**  
