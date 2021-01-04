@@ -9,7 +9,7 @@ There is a rise in interpretability in Natural Languages Processing research, bu
 Anyone interested in doing Interpretable NLP e.g., in SPOC lab is welcome.  
 
 ## Meeting Time & Location
-- Time: Tuesday 9:00-10:00 ET (Toronto time)  
+- Time: Tuesdays 9:00-10:00 ET (Toronto time)  
 - Location: [Zoom](https://utoronto.zoom.us/meeting/register/tZMlcOCpqjIuHNeGNTZOnFJc0b0zV3O9_ikL)  
 - Discussion: [GitHub issues](https://github.com/ZiningZhu/Interpretable-NLP/issues)  
 - Slides: [OneDrive](https://tinyurl.com/interpretable-nlp-slides)  
@@ -17,7 +17,7 @@ Anyone interested in doing Interpretable NLP e.g., in SPOC lab is welcome.
 
 ## Tentative Topics  
 
-1. **Introduction**  
+1. **Introduction (Jan 12, 2021)**    
     *Why should we care about interpretable NLP?*  
     - We want to build NLP systems with better performance.  
       - Leverage language as a resource: which linguistic knowledge do the systems have?  
@@ -39,7 +39,7 @@ Anyone interested in doing Interpretable NLP e.g., in SPOC lab is welcome.
     - Relevant: [CS 335 Fair, Accountable, and Transparent Deep Learning](https://hci.stanford.edu/courses/cs335/2020/sp) -- this is more on the DL / ML / algorithm side. There are some overlapping with Interpretable NLP.  
 
 
-2. **Background: language modeling, DNNs in NLP**  
+2. **Background: language modeling, DNNs in NLP (Jan 19, 2021)**  
     - Word embedding, language models, neural language models  
     - Early approaches of word embeddings: SVD ("Latent Semantic Analysis") [(Landauer and Dumais, 2005)](https://pcl.sitehost.iu.edu/rgoldsto/courses/concepts/landauer.pdf)  
     - A Neural Probabilistic Language Model [(Bengio et al., 2003)](https://dl.acm.org/doi/10.5555/944919.944966)  
@@ -49,7 +49,7 @@ Anyone interested in doing Interpretable NLP e.g., in SPOC lab is welcome.
     - On Losses for Modern Neural LMs [(Aroca-Ouellette and Rudzicz, 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.403/)  
 
 
-3. **Background: Interpretability, explainable AI**  
+3. **Background: Interpretability, explainable AI (Jan 26, 2021)**  
     - Review / positional papers:
       - The Mythos of Model Interpretability [(Lipton, 2016)](https://arxiv.org/abs/1606.03490)  
       - A Diagnostic Study of Explainability Techniques for Text Classification [(Atanasova et al., 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.263)  
@@ -128,7 +128,7 @@ Anyone interested in doing Interpretable NLP e.g., in SPOC lab is welcome.
       <!--- Use task-specific information to describe the difficulties of text-based classification datasets (2021)  -->
 
 
-9. **Topic: Rationales in classification**  
+9.  **Topic: Rationales in classification**  
     - Dataset: e-SNLI [(Camburu et al., 2018)](https://arxiv.org/abs/1812.01193)  
     - Generating plausible counterfactual explanations with deep transformers in financial text classification [(Yang et al., 2020)](https://arxiv.org/abs/2010.12512)  
     - Towards explainable NLP: A generative explanation framework for text classification [(Liu et al., 2019)](https://www.aclweb.org/anthology/P19-1560/)  
