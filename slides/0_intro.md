@@ -9,9 +9,8 @@ paginate: true
 ---
 
 # Introduction to Interpretable NLP
-## Zining Zhu, Frank Rudzicz
-
-University of Toronto Computer Science
+## Interpretable-NLP Talk 0
+Zining Zhu
 
 ---
 # Current DNN-based NLP systems are good
@@ -139,11 +138,33 @@ All of them involve **interpretability**.
 
 
 ---
+# Relevant Tracks
+- Mainly about the ACL/EMNLP/NAACL track "Interpretability and analysis of NLP models".  
+- BlackboxNLP workshop  
+- Connection: FAccT, ML4H, psycholinguistics, theory, NLP+Society
+
+---
+# Relevant material
+- ACL 2020 tutorial [Interpretability and Analysis in Neural NLP](https://sebastiangehrmann.com/assets/files/acl_2020_interpretability_tutorial.pdf) (topics: diagnostic classifiers, behavioral tests)  
+- EMNLP 2020 tutorial [Interpreting Predictions of NLP Models](https://github.com/Eric-Wallace/interpretability-tutorial-emnlp2020) (topics: influencing samples in datasets, etc.)  
+- [CS 335 Fair, Accountable, and Transparent Deep Learning](https://hci.stanford.edu/courses/cs335/2020/sp) -- this is more on the DL / ML / algorithm side. There are some overlapping with Interpretable NLP.  
+- Interpretable NLP covers much more.  
+
+---
 # What does interpretable NLP involve?
 - Geometry of representations  
 - Diagnostic probes  
 - Behavioral testing  
 - Causal interpretations  
 - Influence of datasets  
+- Interpretability in dialogues  
 
 ... many others
+
+---
+# Meeting Times & Locations
+Time: Tuesdays 9-10am ET (Toronto time)  
+Location: Zoom   
+
+Information website: https://ziningzhu.me/Interpretable-NLP  
+Discussion: GitHub Issues
