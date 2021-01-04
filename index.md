@@ -4,16 +4,18 @@ layout: default
 
 # Interpretable-NLP
 
-In this repo, I try to collect some reading material about interpretable natural languages processing research. 
+There is a rise in interpretability in Natural Languages Processing research, but few resource is available online. This seminar aims at drawing a picture of interpretability in NLP research, and review interesting relevant topics. 
 
-## Goal  
-- Draw a picture about hot research topics in Interpretable NLP.   
-- This could be used in a semester-length discussion group / seminar about interpretable NLP.  
+Anyone interested in doing Interpretable NLP e.g., in SPOC lab is welcome.  
 
-## Target audience  
-Anyone interested in doing Interpretable NLP in SPOC lab.  
+## Meeting Time & Location
+- Time: Tuesday 9:00-10:00 ET (Toronto time)  
+- Location: [Zoom](https://utoronto.zoom.us/meeting/register/tZMlcOCpqjIuHNeGNTZOnFJc0b0zV3O9_ikL)  
+- Discussion: [GitHub issues](https://github.com/ZiningZhu/Interpretable-NLP/issues)  
+- Slides: [OneDrive](https://tinyurl.com/interpretable-nlp-slides)  
 
-## Topics to be included  
+
+## Tentative Topics  
 
 1. **Introduction**  
     *Why should we care about interpretable NLP?*  
@@ -94,7 +96,7 @@ Anyone interested in doing Interpretable NLP in SPOC lab.
     - What BERT is not: Lessons from a New Suite of Psycholinguistic Diagnostics for Language Models [(Ettinger, 2020)](https://www.mitpressjournals.org/doi/full/10.1162/tacl_a_00298)  
     - Investigating the linguistic knowledge of NLP models [(Bacon, 2020)](https://escholarship.org/uc/item/7tk21797)    
     - Climbing towards NLU [(Bender and Koller, 2020)](https://www.aclweb.org/anthology/2020.acl-main.463/)  
-    - When is BERT surprised? (2021)  
+    <!--- When is BERT surprised? (2021)-->  
 
 
 7. **Topic: Spurious correlations, shortcut learning**    
@@ -123,7 +125,7 @@ Anyone interested in doing Interpretable NLP in SPOC lab.
     - Other methods to understand the datasets:  
       - Dataset Cartography: Mapping and Diagnosing Datasets with Training Dynamics [(Swayamdipta et al., 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.746/)  
       - With Little Power Comes Great Responsibility [(Card et al., 2020)](https://arxiv.org/abs/2010.06595)  
-      - Use task-specific information to describe the difficulties of text-based classification datasets (2021)  
+      <!--- Use task-specific information to describe the difficulties of text-based classification datasets (2021)  -->
 
 
 9. **Topic: Rationales in classification**  
@@ -167,3 +169,7 @@ Anyone interested in doing Interpretable NLP in SPOC lab.
     - OOD generalization  
       - The robust decision rules / "causal inductive biases" are those that are generalizable across domains  
       - How can we accelerate progress towards human-like language generalization? [(Linzen, 2020)](https://www.aclweb.org/anthology/2020.acl-main.465/)  
+
+
+14. **Topic: Interpretability and Dialogue**  
+    - [(Tutek and Šnajder, 2018)](https://www.aclweb.org/anthology/W18-5427/)  
