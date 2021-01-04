@@ -41,7 +41,7 @@ Anyone interested in doing Interpretable NLP e.g., in SPOC lab is welcome.
 
 2. **Background: language modeling, DNNs in NLP (Jan 19, 2021)**  
     - Word embedding, language models, neural language models  
-    - Early approaches of word embeddings: SVD ("Latent Semantic Analysis") [(Landauer and Dumais, 2005)](https://pcl.sitehost.iu.edu/rgoldsto/courses/concepts/landauer.pdf)  
+    - Early approaches of word embeddings: SVD ("Latent Semantic Analysis") [(Landauer and Dumais, 1997)](https://pcl.sitehost.iu.edu/rgoldsto/courses/concepts/landauer.pdf)  
     - A Neural Probabilistic Language Model [(Bengio et al., 2003)](https://dl.acm.org/doi/10.5555/944919.944966)  
     - Word2vec and *the traditional NLP pipeline* [(Collobert and Weston, 2008)](https://dl.acm.org/doi/10.1145/1390156.1390177)  
     - SoTA LM for some time: AWD-LSTM [(Merity et al., 2017)](https://arxiv.org/abs/1708.02182)  
