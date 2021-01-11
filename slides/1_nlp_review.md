@@ -2,13 +2,13 @@
 marp: true
 theme: gala
 class: lead
-footer: A Quick Review of NLP
+footer: A Quick Review of Some NLP Models
 header: ![width:200px center](res/uoft_compsci.png)
 size: 16:9
 paginate: true
 ---
 
-# An Interpretability View of Some NLP Models
+# An Quick Review of Some NLP Models
 
 ## Interpretable-NLP Talk 1
 Zining Zhu
@@ -179,7 +179,7 @@ Learn word vectors $w$ and $\tilde{w}$ from the $X$ matrix:
 # Bidirectional Encoder Representation from Transformers
 - [Devlin et al., (2019)](https://www.aclweb.org/anthology/N19-1423/) proposed the **BERT** model
   - 12/24-layer Transformer *encoder*.
-  - Byte-pair encoding ("word-piece")  
+  - Byte Pair Encoding ("word-piece") tokenization  
   - K/Q/V multi-headed attention, `gelu` activation, ...
   - Train with (1) masked LM, and (2) next-sentence prediction task. 
 - These combinations seem arbitrary.  
@@ -199,4 +199,4 @@ Learn word vectors $w$ and $\tilde{w}$ from the $X$ matrix:
 - NLP provides a window for understanding knowledge & intelligence.
 - Many popular tasks and models (e.g., neural networks for language modeling) evolves along this goal.  
 
-Next up: a recap of explainable AI.
+Next up: A Quick Review of Some Explainable AI Methods.
