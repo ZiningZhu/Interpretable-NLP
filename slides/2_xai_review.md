@@ -112,9 +112,6 @@ Attentions are prevalent in most deep neural models.
    - "importance" as saliency scores (gradient values, or products)
    - Many other details at [(Serrano and Smith, 2019)](https://arxiv.org/abs/1906.03731)
 
-
----
-# Is Attention Interpretable?
 Attentions are **noisy** predictions of input words' importances.
 
 ---
@@ -153,6 +150,46 @@ Attentions are **noisy** predictions of input words' importances.
 - Gradient-based approaches: e.g., Saliency
 - Perturbation-based approaches: e.g., Occlusion
 - Simplification-based explanation: e.g., LIME
+
+---
+# How should we define and evaluate faithfulness?
+[(Jacovi and Goldberg, 2020)](https://www.aclweb.org/anthology/2020.acl-main.386/)  
+- Two notable criteria for XAI: plausibility and faithfulness
+  - Plausibility: how convincing the interpretation is to humans.
+  - Faithfulness: how accurately it reflects the model's reasoning process.
+- The current definition for faithfulness has assumptions:  
+  - A1: same reasoning process $\rightarrow$ the same preditions  
+  - A2: similar reasoning $\rightarrow$ similar decisions given inputs  
+  - A3: some parts of the input are more important than others.
+
+---
+# Manipulating and Modeling Model Interpretability
+[(Poursabzi-Sangdeh et al., 2018)](https://arxiv.org/abs/1802.07810)  
+- In AI: interpretability techniques include:
+   (1) clear / transparency.  
+   (2) post-hoc explanation.  
+- Do humans really benefit from interpretability?  
+
+---
+# Manipulating and Modeling Model Interpretability
+Five experiments (1/2)
+- Task: predict apartments' selling price from features.  
+- E1: Let participants guess how models would predict. Then show them model predictions. Then guess again.  
+- E2: Scale down the selling price. Replicate E1.
+- E3: Use weight of advice to measure how much people follow models' predictions.
+
+Findings from E1-E3:  
+1. Participants did *not* follow the model predictions.  
+2. Participants did *not* correct the model's sizable mistakes.
+
+---
+# Manipulating and Modeling Model Interpretability
+Five experiments (2/2)  
+- E4: E1 setting, but show a signal: "this apartment may be an outlier"  
+Finding: Participants shown this signal can detect & correct model mistakes.
+- E5: Post-hoc analysis for E1&2. Participants shown clear 8-feature model followed predictions less closely (than clear-2, BB-2, and BB-8 models).
+Finding: Possibly information overload?
+
 
 ---
 # Summary
