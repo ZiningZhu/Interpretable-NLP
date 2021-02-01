@@ -156,7 +156,7 @@ Learn word vectors $w$ and $\tilde{w}$ from the $X$ matrix:
 - Why set up this analogy? Because:
   - If words i and j are similar (i.e., $w_i^T \tilde{w}_j$ is large), then ...
    the word j should occur frequently in i's contexts. (i.e., $\frac{X_{ij}}{X_i}$ is large)
-  - The $\text{exp}(\cdot)$ is there so the math will work out.
+  - The $\text{exp}(\cdot)$ is there, since the other side (word frequencies, $X_{ij}$) follow exponential distributions.
 
 ---
 # Neural Networks as Composition Functions
