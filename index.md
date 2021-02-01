@@ -6,7 +6,7 @@ layout: default
 
 There is a rise in interpretability in Natural Languages Processing research, but few resource is available online. This seminar aims at drawing a picture of interpretability in NLP research, and review interesting relevant topics. 
 
-Anyone interested in doing Interpretable NLP e.g., in SPOC lab is welcome.  
+Anyone interested in doing Interpretable NLP e.g., in [SPOC lab](https://twitter.com/SPOClab) is welcome.  
 
 ## Meeting Time & Location
 - Time: Tuesdays 9:00-10:00 ET (Toronto time)  
@@ -87,6 +87,7 @@ Anyone interested in doing Interpretable NLP e.g., in SPOC lab is welcome.
       - [(Hewitt and Liang, 2019)](https://www.aclweb.org/anthology/D19-1275/) the "good probe or good representations" dichotomy  
       - [(Pimentel et al., 2020)](https://www.aclweb.org/anthology/2020.acl-main.420/) an information theoretic framework  
       - [(Zhu and Rudzicz, 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.744/) an information theoretic explanation for the dichotomy. Limitations of diagnostic classifier probing.  
+      - [(Voita and Titov, 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.14/) Information-Theoretic Probing with Minimum Description Length
 
 
 6. **Topic: Psycholinguistic tests on NLP models**
@@ -159,6 +160,7 @@ Anyone interested in doing Interpretable NLP e.g., in SPOC lab is welcome.
     - Men Also Like Shopping: Reducing Gender Bias Amplification Using Corpus-level Constraints [(Zhao et al., 2017)](https://www.aclweb.org/anthology/D17-1323/)  
     - The Geometry of Culture: Analyzing the Meanings of Class through Word Embeddings [(Kozlowski et al., 2019)](https://journals.sagepub.com/doi/full/10.1177/0003122419877135) 
     - The Woman Worked as a Babysitter: On Biases in Language Generation [(Sheng et al., 2019)](https://www.aclweb.org/anthology/D19-1339/)  
+    - Lipstick on a Pig: Debiasing Methods Cover up Systematic Gender Biases in Word Embeddings But do not Remove Them [(Gonen and Goldberg, 2019)](https://www.aclweb.org/anthology/N19-1061/)  
 
 
 13. **Topic: Adversarial Attacks, Robustness, OOD generalization**
