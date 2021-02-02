@@ -66,7 +66,8 @@ We can approximate a model with the following linear model with $M+1$ dimensions
 $$g(z') = \phi_0 + \Sigma_{i=1}^{M} \phi_i z_i'$$
 
 - $z=[z_1, z_2, ..., z_M]$ is an "explanation" point that explains $x=[x_1, ..., x_M]$.
-- $\phi_i$ are the *importance* of the $i^{th}$ feature.
+  - To explain images, $x_i$ is a pixel. $z_i$ can be a "superpixel" / "coalition".
+- $\phi_i$ is the *importance* of the $i^{th}$ feature.
 
 ---
 # A Method to Compute Feature Importance
@@ -199,4 +200,5 @@ Finding: Possibly information overload?
   - A method based on Shapley values: SHAP
   - Attention-based methods
   - SVCCA
-- There are many more recent methods. Will discuss them in upcoming weeks.
+- Interpretability to humans might be complicated.  
+- Next week: Geometry of embeddings. How to improve embeddings using interpretability.  
