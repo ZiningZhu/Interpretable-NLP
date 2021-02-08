@@ -49,7 +49,7 @@ Anyone interested in doing Interpretable NLP e.g., in [SPOC lab](https://twitter
     - On Losses for Modern Neural LMs [(Aroca-Ouellette and Rudzicz, 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.403/)  
 
 
-3. **Background: Interpretability, explainable AI (Jan 26, 2021)**  
+3. **Background: Interpretability, explainable AI (Feb 2, 2021)**  
     - Review / positional papers:
       - The Mythos of Model Interpretability [(Lipton, 2016)](https://arxiv.org/abs/1606.03490)  
       - A Diagnostic Study of Explainability Techniques for Text Classification [(Atanasova et al., 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.263)  
@@ -64,7 +64,7 @@ Anyone interested in doing Interpretable NLP e.g., in [SPOC lab](https://twitter
       - SVCCA: Singular Vector Canonical Correlation Analysis for Deep Learning Dynamics and Interpretability [(Raghu et al., 2017)](https://arxiv.org/abs/1706.05806)  
 
 
-4. **Topic: The geometry of embeddings**
+4. **Topic: The geometry of embeddings (Feb 9, 2021)**  
     - Linear analogy  
       - The promising "linear analogy" property of Mikolov word2vec, and subsequent debates: "man is to doctor as woman is to doctor" [(Nissim et al., 2019)](https://arxiv.org/abs/1905.09866)   
       - GloVe (Pennington et al., 2016), Levy and Goldberg (2015), then Kawin's linear analogy paper, and then:  
