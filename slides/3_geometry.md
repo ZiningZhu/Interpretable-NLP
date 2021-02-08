@@ -14,13 +14,14 @@ Zining Zhu
 
 ---
 # Contents
-1. Two viewpoints in interpreting the geometry:
-- Linear Analogy  
-- Anisotropy  
+1. Three viewpoints in interpreting the geometry:
+   - Linear Analogy  
+   - Anisotropy  
+   - Manifold
 
 2. How can we use these understanding to build better embeddings?  
-- New methods could benefit old models!
-- Consider frequency & isotropy might help 
+   - New methods could benefit old models!
+   - Consider frequency & isotropy might help 
 
 ---
 # Recap: word2vec appeared promising
@@ -77,6 +78,39 @@ We can get ok performance with much fewer parameters. [(Li et al., 2018)](https:
 - More at [(Ethayarajh, 2019)](https://www.aclweb.org/anthology/D19-1006/)  
 
 ---
+# Separability and geometry of object manifolds in deep neural networks
+[(Cohen et al., 2020)](https://www.nature.com/articles/s41467-020-14578-5)  Consider the linear separability of manifolds.  
+- $N$ neurons representing $P$ object manifolds.  
+  ($P$ classes represented by a layer of $N$ neurons)  
+- Define the ratio of system load $\alpha=\frac{P}{N}$.  
+- There exists a critical load value $\alpha_c$ ("manifold classification capacity"):  
+  - When $P < \alpha_c N$: object manifolds are separable with high probability.  
+  - When $P > \alpha_c N$: the manifolds are inseparable with high probability.  
+
+---
+# On the geometry of generalization and memorization in DNNs
+[(Stephenson et al., 2021)](https://openreview.net/forum?id=V8jrrnwGbuc)  Compute the following manifold geometry metrics (MGMs):  
+  - Manifold Capacity $\alpha_M = \frac{P}{N}$: "decodable class information in given data."  
+  - Manifold Dimension $D_M$. 
+    Small $D_M$: the *anchor points* occupy a low-dimensional subspace.  
+    Anchor points: representative support vectors that determine the optimal hyperplane separating the binary dichotomy of manifolds.
+  - Manifold Radius $R_M$.
+    Small $R_M$: tightly grouped anchor points.  
+
+---
+[(Stephenson et al., 2021)](https://openreview.net/forum?id=V8jrrnwGbuc) observed:  
+![bg right height:400px](res/3_geometry/stephenson2021_fig3.png)  
+- DNNs ignore (small $\alpha_M$, large $D_M$ and $R_M$) randomly labeled data (orange lines) in the early layers and epochs  
+
+---
+Also in [(Stephenson et al., 2021)](https://openreview.net/forum?id=V8jrrnwGbuc), A view of double descent involves:  
+(i) "Drop and recover" accuracy, (ii) Around unchanged $R_M$, (iii) Increased $D_M$.  
+ 
+![height:350px](res/3_geometry/stephenson2021_fig4c_e.png)
+
+
+
+---
 # Improving embedding quality
 ... using the lessons learned from word embeddings [(Levy and Goldberg, 2015)](https://www.aclweb.org/anthology/Q15-1016/)  
 - Identify some transferable hyper-parameters:
@@ -130,10 +164,10 @@ Where $h_t$ is the layer parameter.
 
 ---
 # Summary
-1. Two viewpoints in interpreting the geometry:
-- Linear Analogy  
-- Anisotropy  
-
+1. Three viewpoints in interpreting the geometry:
+   - Linear Analogy  
+   - Anisotropy  
+   - Manifold  
 2. How can we use these understanding to build better embeddings?  
-- New methods could benefit old models!
-- Consider frequency & isotropy might help 
+   - New methods could benefit old models!
+   - Consider frequency & isotropy might help  
