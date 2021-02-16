@@ -18,76 +18,49 @@ Anyone interested in doing Interpretable NLP e.g., in [SPOC lab](https://twitter
 ## Tentative Topics  
 
 1. **Introduction (Jan 12, 2021)**    
-    *Why should we care about interpretable NLP?*  
-    - We want to build NLP systems with better performance.  
-      - Leverage language as a resource: which linguistic knowledge do the systems have?  
-      - SoTA, even commercial models still have imperfectness (e.g., negated negative should be positive or neutral, and switching locations should not change the sentiment), according to [Checklist](https://www.aclweb.org/anthology/2020.acl-main.442/).  
-    - "Good performance" requires much more than just "high accuracy".  
-      - ["Utility Is in the Users' Eyes"](https://www.aclweb.org/anthology/2020.emnlp-main.393/)  
-      - High accuracy could be caused by shortcut learning. More in section 7.    
-    - We want to build NLP systems that deploy well in the society.  
-      - Early experiment e.g., the HitchBot project (2013-2015): dealing with real people is complicated.  
-      - Good performance on experimental datasets doesn't necessarily generalize to the real world.
-      - Fairness, accountability, and transparency (FAccT). We want to "open the black boxes". Recent discussions include: [On the Danger of Stochastic Parrots](https://www.technologyreview.com/2020/12/04/1013294/google-ai-ethics-research-paper-forced-out-timnit-gebru/).  
-
-    *What do interpretable NLP research include?*  
-    - Mainly about the ACL/EMNLP/NAACL track "Interpretability and analysis of NLP models". BlackboxNLP workshop is also relevant.  
-    - Connection to: FAccT, theory, psycholinguistics, ML4H  
-    - Two recent tutorials, each discussing some topics: 
-      - ACL 2020 tutorial [Interpretability and Analysis in Neural NLP](https://sebastiangehrmann.com/assets/files/acl_2020_interpretability_tutorial.pdf) (topics: diagnostic classifiers, behavioral tests)  
-      - EMNLP 2020 tutorial [Interpreting Predictions of NLP Models](https://github.com/Eric-Wallace/interpretability-tutorial-emnlp2020) (topics: influencing samples in datasets, etc.)  
-    - Relevant: [CS 335 Fair, Accountable, and Transparent Deep Learning](https://hci.stanford.edu/courses/cs335/2020/sp) -- this is more on the DL / ML / algorithm side. There are some overlapping with Interpretable NLP.  
+    - Why should we care about interpretable NLP?  
+      - We want to build NLP systems with better performance.  
+      - "Good performance" requires much more than just "high accuracy".    
+      - We want to build NLP systems that deploy well in the society.  
+    - What do interpretable NLP research include?   
+      - Mainly about the ACL/EMNLP/NAACL track "Interpretability and analysis of NLP models". BlackboxNLP workshop is also relevant.  
+      - Connection to: FAccT, theory, psycholinguistics, ML4H  
 
 
 2. **Background: language modeling, DNNs in NLP (Jan 19, 2021)**  
-    - Word embedding, language models, neural language models  
-    - Early approaches of word embeddings: SVD ("Latent Semantic Analysis") [(Landauer and Dumais, 1997)](https://pcl.sitehost.iu.edu/rgoldsto/courses/concepts/landauer.pdf)  
-    - A Neural Probabilistic Language Model [(Bengio et al., 2003)](https://dl.acm.org/doi/10.5555/944919.944966)  
-    - Word2vec and *the traditional NLP pipeline* [(Collobert and Weston, 2008)](https://dl.acm.org/doi/10.1145/1390156.1390177)  
-    - SoTA LM for some time: AWD-LSTM [(Merity et al., 2017)](https://arxiv.org/abs/1708.02182)  
-    - Contextualized language models: ELMo, BERT, GPT-2, XLNet, ALBERT  
-    - On Losses for Modern Neural LMs [(Aroca-Ouellette and Rudzicz, 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.403/)  
+   - A view of NLP: it is a window for understanding knowledge & intelligence.
+   - Many popular tasks and models (e.g., neural networks for language modeling) are developed along this goal: LSA, probabilistic neural LM, word2vec / GloVe, contextualized LM, ...
 
 
 3. **Background: Interpretability, explainable AI (Feb 2, 2021)**  
-    - Review / positional papers:
-      - The Mythos of Model Interpretability [(Lipton, 2016)](https://arxiv.org/abs/1606.03490)  
-      - A Diagnostic Study of Explainability Techniques for Text Classification [(Atanasova et al., 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.263)  
-    - Post-hoc, local, linear interpretations [(Ribeiro 2016, LIME)](https://arxiv.org/abs/1602.04938)  
-    - SHAP (SHapley Additive exPlanations): a game theoretic approach to explain the output of a model. [paper](https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html), [SHAP package](https://shap.readthedocs.io/en/latest/)   
-    - Explain by attention / heatmaps:  
-      - Is Attention Interpretable? [(Serrano and Smith, 2019)](https://arxiv.org/abs/1906.03731)  
-      - Attention is Not Explanation [(Jain and Wallace, 2019)](https://arxiv.org/abs/1902.10186)  
-      - Attention is Not Not Explanation [(Wiegreffe and Pinter, 2019)](https://arxiv.org/abs/1908.04626)  
-    - Explain with CCA:  
-      - Deep-CCA [(Andrew et al., 2013)](https://ttic.uchicago.edu/~klivescu/papers/andrew_icml2013.pdf)    
-      - SVCCA: Singular Vector Canonical Correlation Analysis for Deep Learning Dynamics and Interpretability [(Raghu et al., 2017)](https://arxiv.org/abs/1706.05806)  
+   - Some principles of model interpretability.  
+   - Some early methods to interpret models, including:
+     - A local, (almost-) linear, post-hoc method: LIME
+     - A method based on Shapley values: SHAP
+     - Attention-based methods
+     - SVCCA
+   - Interpretability to humans might be complicated.  
 
 
 4. **Topic: The geometry of embeddings (Feb 9, 2021)**  
-    - Linear analogy  
-      - The promising "linear analogy" property of Mikolov word2vec, and subsequent debates: "man is to doctor as woman is to doctor" [(Nissim et al., 2019)](https://arxiv.org/abs/1905.09866)   
-      - GloVe (Pennington et al., 2016), Levy and Goldberg (2015), then Kawin's linear analogy paper, and then:  
-      - Embedding explained: towards understanding word embeddings [(Allen and Hospidales, 2019)](https://arxiv.org/pdf/1901.09813.pdf)  
-      - Why are such low-dimensional interpretations (e.g., linear analogy) possible for deep neural representations? A relevant work: Measuring the Intrinsic Dimension of Objective Landscapes [(Li et al., 2018)](https://arxiv.org/abs/1804.08838)  
-    - Isotropy  
-      - Skip-gram negative sampling results in words distributed in a narrow cone (highly isotropic) [(Mimno and Thompson, 2017)](https://www.cs.cornell.edu/~laurejt/papers/sgns-geometry-2017.pdf)  
-      - We can discourage isotropy during training [(Wang et al., 2019)](http://proceedings.mlr.press/v97/wang19f/wang19f.pdf) or by post-processing [(Mu and Viswanath, 2018)](https://openreview.net/forum?id=HkuGJ3kCb), to get better embeddings.  
-      - Analyzing the (an-)isotropy in contextualized word representations [(Ethayarajh, 2019)](https://www.aclweb.org/anthology/D19-1006/)  
-    - Visualizing and measuring the geometry of BERT [(Reif et al., 2019)](https://papers.nips.cc/paper/2019/hash/159c1ffe5b61b41b3c4d8f4c2150f6c4-Abstract.html). Their goal is to interpret the geometry, but the methodology is similar to Hewitt and Manning, (2019). Analyzing the geometry evolves into "reducing the dimensions of representations into interpretable dimensions", i.e., diagnostic classification.   
+   - Three viewpoints in interpreting the geometry:
+      - Linear Analogy  
+      - Anisotropy  
+      - Manifold
+   - How can we use these understanding to build better embeddings?  
+      - New methods could benefit old models!
+      - Consider frequency & isotropy might help 
 
 
-5. **Topic: Diagnostic classifiers**  
-    - [(Alain and Bengio, 2017)](https://arxiv.org/abs/1610.01644): linear classifier as diagnostic classifiers  
-    - [(Ettinger, 2016)](https://www.aclweb.org/anthology/W16-2524/): Probing for semantic evidence of composition by means of simple classification tasks  
-    - Various probing papers: "what to probe for"
-      - [(Hewitt Manning, 2019)](https://www.aclweb.org/anthology/N19-1419/): A structural probe for finding syntax in word representations  
-      - [(Tenney et al., 2019)](https://arxiv.org/abs/1905.05950): BERT rediscovers traditional NLP pipeline  
-    - Developing the methods for probing: "how to probe"
-      - [(Hewitt and Liang, 2019)](https://www.aclweb.org/anthology/D19-1275/) the "good probe or good representations" dichotomy  
-      - [(Pimentel et al., 2020)](https://www.aclweb.org/anthology/2020.acl-main.420/) an information theoretic framework  
-      - [(Zhu and Rudzicz, 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.744/) an information theoretic explanation for the dichotomy. Limitations of diagnostic classifier probing.  
-      - [(Voita and Titov, 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.14/) Information-Theoretic Probing with Minimum Description Length
+5. **Topic: Probing (Feb 16, 2021)**  
+   - What is probe and how to probe?
+     - Probe as a diagnostic classifier
+       - Probe for semantic evidence, syntax, or other aspects in NLP pipeline  
+       - An information theory framework
+     - Extend "probe" to e.g., without parameters  
+   - What can probes do?  
+     - Assess & remove bias  
+     - Assess the utility of features  
 
 
 6. **Topic: Psycholinguistic tests on NLP models**
