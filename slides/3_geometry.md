@@ -37,9 +37,22 @@ In many cases, the analogy test returns just the original word. [(Nissim et al.,
 ![height:400px](res/3_geometry/nissim2019.png)  
 
 ---
-# Why are low-dimensional embeddings possible?
+# How are low-dimensional embeddings possible?
+Recall:  
+  - one linear decision boundary can't solve XOR;  
+  - MNIST can be projeted to one dimension with 10 intervals.  
+
+---
+# The intrinsic dimension of objective landscapes
 We can get ok performance with much fewer parameters. [(Li et al., 2018)](https://arxiv.org/abs/1804.08838)  
 ![height:400px](res/3_geometry/li2019landscape.png)
+
+---
+# High dimensional geometry could be confusing
+- In high dimensions, the Gaussian distribution looks like a "soap bubble".  
+  If we randomly sample two points from D-dimensional Gaussian, their cosine similarities are closer to $1.0$.  
+- Regardless, we can use cosine similarities to get some insights.  
+![height:250px](res/3_geometry/gaussian_cos_sim_by_dimension.png)
 
 ---
 # The narrow cone
