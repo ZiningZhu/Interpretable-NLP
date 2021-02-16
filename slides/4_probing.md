@@ -26,12 +26,11 @@ Zining Zhu
 
 ---
 # Probing for semantic evidence: task
-[Ettinger et al., 2016](https://www.aclweb.org/anthology/W16-2524.pdf)  
-Use *simple classification tasks* to assess the specific **semantic information** captured in the sentence representations.  
+[Ettinger et al., (2016)](https://www.aclweb.org/anthology/W16-2524.pdf) used *simple classification tasks* to assess the specific **semantic information** captured in the sentence representations.  
 
 **Input**: a specially crafted sentence, encoded.  
 **Output**: a label.  
-
+**Evaluation**: a good representation should allow high classification performance.
 
 ---
 # Probing for semantic evidence: data
@@ -138,10 +137,10 @@ Why? Let's give a formal explanation using information theory.
 ---
 # An Information Theory Framework for Probing
 [Zhu & Rudzicz, (2020)](https://www.aclweb.org/anthology/2020.emnlp-main.744/): We can rearrange the terms, so that:  
-$$H(p,q_\theta) = H(T) - I(T|R) + \text{KL}(p||q_\theta)$$  
+$$H(p,q_\theta) = H(T) - I(T;R) + \text{KL}(p||q_\theta)$$  
 - $H(T)$: constant. Ignore this for now.  
 - A small $H(p,q_\theta)$ can be caused by either of the two reasons:  
-  - A large $I(T|R)$: The representation $R$ is rich in information for the target $T$.  
+  - A large $I(T;R)$: The representation $R$ is rich in information for the target $T$.  
   - A small $\text{KL}(p||q_\theta)$: The probe "learns the task".    
 - This explains the "dichotomy" of [Hewitt & Liang, (2019)](https://www.aclweb.org/anthology/D19-1275/)!  
  
@@ -160,16 +159,17 @@ How about the control task?
 
 ---
 # Probing with Minimum Description Length
-[Voita and Titov, (2020)](https://www.aclweb.org/anthology/2020.emnlp-main.14/) considered probing as *a channel transmitting* from $T$ to $R$ (they used $x$ and $y$ respectively).  
-- To approximate $I(T;R)$: measure the **minimum description length** (also on two tasks: the control task $x\rightarrow y$ minus that of the probing task $x_c\rightarrow y$).  
+[Voita and Titov, (2020)](https://www.aclweb.org/anthology/2020.emnlp-main.14/) considered probing as *a channel transmitting* from $R$ to $T$ (they used $x$ and $y$ respectively).  
+- To approximate $I(T;R)$: measure the **minimum description length** (also on two tasks: the control task $x_c\rightarrow y$ minus that of the probing task $x\rightarrow y$).  
 $$MDL(x\rightarrow y) = L_{model} + L_{data}$$  
-- $L_{data}$ is the cross entropy loss.  
-- $L_{model}$ is the $KL(\beta || \alpha)$ of the model, where $\alpha$ and $\beta$ are the prior & posterior distributions of the model parameters.  
+- Transmit the model, as well as the data encoded with this model.
+  - $L_{data}=-\mathbb{E} \text{log}_2 p(y|x)$ is the cross entropy loss.  
+  - $L_{model}$ is the $KL(\beta || \alpha)$ of the model, where $\alpha$ and $\beta$ are the prior & posterior distributions of the model parameters. More at "bits-back argument" [(Hinton and von Cramp, 1993)](https://www.cs.toronto.edu/~hinton/absps/colt93.pdf) 
 
 
 ---
 # Probing with Minimum Description Length
-Two methods to compute MDL:  
+[Voita and Titov, (2020)](https://www.aclweb.org/anthology/2020.emnlp-main.14/) presented two methods to compute MDL:  
 - Variational coding: compute $L_{data} + L_{model}$ directly.
   - $L_{data}$ is basically the cross entropy loss (NLLoss).  
   - Change the probing model to a BNN, so we can estimate KL.  
@@ -183,10 +183,9 @@ Two methods to compute MDL:
 # Information Theory and How to Probe
 Summary up till now:  
 - We shouldn't equate "high probing performance" with "rich knowledge in representation".  
-- Instead, use the *improvement* of Acc / NLLoss compared to the control tasks.  
-- Which probing model to use?  
-  - There are still debates. Hewitt & Liang, (2019): use simpler models. Pimentel et al., (2020): use highest performing models.  
-- Walkaround: just use MDL. Don't need to worry about which model to use.  
+- Instead, use the *improvement* of performance compared to the control tasks.  
+  - Using acc / NLLLoss: There are still debates. Hewitt & Liang, (2019): use simpler models. Pimentel et al., (2020): use highest performing models.  
+  - Voita & Titov (2020): Just use MDL. Don't need to worry about which probe to choose.  
 
 
 ---
@@ -214,7 +213,7 @@ Perturbed Masking [(Wu et al., 2020)](https://arxiv.org/abs/2004.14786)
 ---
 # Null It Out: Iterative Null-Space Projection
 ![height:200px](res/4_probing/Ravfogel2020null.png)
-[(Ravfogel et al., 2020)](https://arxiv.org/abs/2004.07667)   Figure 1: t-SNE projection of GloVe vectors of the most gender-biased words after t=0,3,18l and 35 iterations of INLP. Words are colored according to being male-biased or female-biased.
+[(Ravfogel et al., 2020)](https://arxiv.org/abs/2004.07667)   Figure 1: t-SNE projection of GloVe vectors of the most gender-biased words after t=0,3,18 and 35 iterations of INLP. Words are colored according to being male-biased or female-biased.
 
 
 ---
