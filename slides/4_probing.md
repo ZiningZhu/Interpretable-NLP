@@ -159,12 +159,13 @@ How about the control task?
 
 ---
 # Probing with Minimum Description Length
-[Voita and Titov, (2020)](https://www.aclweb.org/anthology/2020.emnlp-main.14/) considered probing as *a channel transmitting* from $R$ to $T$ (they used $x$ and $y$ respectively).  
-- To approximate $I(T;R)$: measure the **minimum description length** (also on two tasks: the control task $x_c\rightarrow y$ minus that of the probing task $x\rightarrow y$).  
+MDL is formulated by [(Rissanen, 1986)](https://www.sciencedirect.com/science/article/abs/pii/0005109878900055). [Voita and Titov, (2020)](https://www.aclweb.org/anthology/2020.emnlp-main.14/) used into probing. 
+Considered probing as *transmitting* from $R$ to $T$ (they used $x$ and $y$ respectively).  
+- Instead of $I(T;R)$, measure the MDL (also on two tasks: the control task $x_c\rightarrow y$ minus that of the probing task $x\rightarrow y$).  
 $$MDL(x\rightarrow y) = L_{model} + L_{data}$$  
-- Transmit the model, as well as the data encoded with this model.
+- Transmit the model, as well as the data encoded with this model.  
   - $L_{data}=-\mathbb{E} \text{log}_2 p(y|x)$ is the cross entropy loss.  
-  - $L_{model}$ is the $KL(\beta || \alpha)$ of the model, where $\alpha$ and $\beta$ are the prior & posterior distributions of the model parameters. More at "bits-back argument" [(Hinton and von Cramp, 1993)](https://www.cs.toronto.edu/~hinton/absps/colt93.pdf) 
+  - $L_{model}$ is the $KL(\beta || \alpha)$ of the model, where $\alpha$ and $\beta$ are the prior & posterior distributions of the model parameters.  
 
 
 ---
@@ -172,11 +173,12 @@ $$MDL(x\rightarrow y) = L_{model} + L_{data}$$
 [Voita and Titov, (2020)](https://www.aclweb.org/anthology/2020.emnlp-main.14/) presented two methods to compute MDL:  
 - Variational coding: compute $L_{data} + L_{model}$ directly.
   - $L_{data}$ is basically the cross entropy loss (NLLoss).  
-  - Change the probing model to a BNN, so we can estimate KL.  
+  - Change the probing model to a BNN to estimate $\text{KL}(\beta||\alpha)$.  
 - Prequential coding: approximate MDL using area below the learning curve.  
   - Take some timesteps (e.g., 0.1%, 0.2%, ..., 50%, 100% of the dataset)  
   - Sum up the NLL at these timesteps, plus $t_1\text{log}_2 K$ (transmit the first portion using uniform code).  
 - Empiriaclly: MDL is stable across choices of probe model hyper-parameters!  
+  - Theoretically: Note the difference from the $I(T;R)$ approaches.
 
 
 ---
