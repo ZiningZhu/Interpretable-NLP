@@ -63,14 +63,10 @@ Anyone interested in doing Interpretable NLP e.g., in [SPOC lab](https://twitter
      - Assess the utility of features  
 
 
-6. **Topic: Psycholinguistic tests on NLP models**
-    - Colorless green RNNs dream hierarchically [(Gulordava et al., 2018)](https://www.aclweb.org/anthology/N18-1108/)  
-    - Targeted syntactic evaluation of language models [(Marvin and Linzen, 2018)](https://www.aclweb.org/anthology/D18-1151/)  
-    - BLiMP: The benchmark of linguistic minimal pairs for English [(Warstadt et al., 2020)](https://www.mitpressjournals.org/doi/full/10.1162/tacl_a_00321)  
-    - What BERT is not: Lessons from a New Suite of Psycholinguistic Diagnostics for Language Models [(Ettinger, 2020)](https://www.mitpressjournals.org/doi/full/10.1162/tacl_a_00298)  
-    - Investigating the linguistic knowledge of NLP models [(Bacon, 2020)](https://escholarship.org/uc/item/7tk21797)    
-    - Climbing towards NLU [(Bender and Koller, 2020)](https://www.aclweb.org/anthology/2020.acl-main.463/)  
-    <!--- When is BERT surprised? (2021)-->  
+6. **Topic: Psycholinguistic tests on NLP models (Feb 23, 2021)**  
+    - Syntactic evaluation of LMs.  
+    - Pragmatic, semantic, and commonsense evaluations.  
+    - Specifically-designed tests (e.g., invariance tests).  
 
 
 7. **Topic: Spurious correlations, shortcut learning**    
@@ -83,7 +79,9 @@ Anyone interested in doing Interpretable NLP e.g., in [SPOC lab](https://twitter
       - Prepare models against shortcuts by fitting the residual [(He et al., 2019)](https://arxiv.org/abs/1908.10763)  
       - Prepare models against shortcuts by constructing challenging datasets [(Gardner et al., 2020)](https://arxiv.org/abs/2004.02709), [(Kaushik et al., 2020)](https://openreview.net/forum?id=Sklgs0NFvr)  
       - Make the datasets a little bit more difficult ("the innoculation setting") [(Warstadt et al., 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.16/)  
-
+    - Improving disentangled text representation learning with information-theoretic guidance [(Cheng et al., 2020)](https://www.aclweb.org/anthology/2020.acl-main.673/)  
+    - SSL from a multi-view perspective [(Tsai et al., 2020)](https://arxiv.org/abs/2006.05576)  
+  
 
 8. **Topic: Influence of samples, understanding the datasets**  
     - Saliency maps: how does each data sample affect the model predictions? (Hard to compute)  
@@ -99,7 +97,7 @@ Anyone interested in doing Interpretable NLP e.g., in [SPOC lab](https://twitter
     - Other methods to understand the datasets:  
       - Dataset Cartography: Mapping and Diagnosing Datasets with Training Dynamics [(Swayamdipta et al., 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.746/)  
       - With Little Power Comes Great Responsibility [(Card et al., 2020)](https://arxiv.org/abs/2010.06595)  
-      <!--- Use task-specific information to describe the difficulties of text-based classification datasets (2021)  -->
+      - Distributed Shapley [(Ghorbani et al., 2020)](https://arxiv.org/pdf/2002.12334.pdf) ([blog](https://hai.stanford.edu/blog/quantifying-value-data), and a less technical version on [arxiv](https://arxiv.org/pdf/1904.02868.pdf))  
 
 
 9.  **Topic: Rationales in classification**  
