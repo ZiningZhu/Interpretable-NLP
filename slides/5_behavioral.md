@@ -200,7 +200,7 @@ Some examples:
     - Measure the robustness: the predictions should not change too much.
 
 Example:      
-Append positive (negative) phrases. Fails if sentence sentiment goes down (up) by >0.1  
+Append positive (negative) phrases. Fails if sentence sentiment goes up (down) by >0.1  
 
 
 ---
