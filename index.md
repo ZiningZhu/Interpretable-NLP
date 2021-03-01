@@ -69,18 +69,12 @@ Anyone interested in doing Interpretable NLP e.g., in [SPOC lab](https://twitter
     - Specifically-designed tests (e.g., invariance tests).  
 
 
-7. **Topic: Spurious correlations, shortcut learning**    
-    - The "right for the wrong reasons" problem
-      - Right for the wrong reasons: diagnosing syntactic heuristics in natural language inference [(McCoy et al., 2019)](https://www.aclweb.org/anthology/P19-1334/)  
-      - [(Niven and Kao, 2019)](https://www.aclweb.org/anthology/P19-1459/)  
-      - This "shortcut learning" problem happens in multiple scenarios (Geirhos et al., 2020)  
-      - Empirical evidence to spurious correlations [(Tu et al., 2020)](https://arxiv.org/abs/2007.06778)  
-    - How to solve this problem?
-      - Prepare models against shortcuts by fitting the residual [(He et al., 2019)](https://arxiv.org/abs/1908.10763)  
-      - Prepare models against shortcuts by constructing challenging datasets [(Gardner et al., 2020)](https://arxiv.org/abs/2004.02709), [(Kaushik et al., 2020)](https://openreview.net/forum?id=Sklgs0NFvr)  
-      - Make the datasets a little bit more difficult ("the innoculation setting") [(Warstadt et al., 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.16/)  
-    - Improving disentangled text representation learning with information-theoretic guidance [(Cheng et al., 2020)](https://www.aclweb.org/anthology/2020.acl-main.673/)  
-    - SSL from a multi-view perspective [(Tsai et al., 2020)](https://arxiv.org/abs/2006.05576)  
+7. **Topic: Spurious correlations, shortcut learning (March 2, 2021)**    
+    - The "right for the wrong reasons" problem.  
+    - Solving this problem:  
+      - Changing dataset distributions.  
+      - Let models avoid the bias.    
+      - Train LMs on larger data.  
   
 
 8. **Topic: Influence of samples, understanding the datasets**  
