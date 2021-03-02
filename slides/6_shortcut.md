@@ -160,7 +160,7 @@ Learning from others' mistakes [(Sanh et al., 2020)](https://openreview.net/foru
 
 $$\mathbf{e} = \mathbf{m} + \mathbf{w}$$
 
-After a softmax operation $\sigma(.)$, it becomes an element-wise product of logits in $\mathbf{m}$ and $\mathbf{w}$:  
+After a softmax operation $\sigma(\cdot)$, it becomes an element-wise product of logits in $\mathbf{m}$ and $\mathbf{w}$:  
 
 $$\sigma(\mathbf{e}) \propto \text{exp}(\mathbf{e}) = \text{exp}(\mathbf{m} + \mathbf{w}) = \text{exp}(\mathbf{m}) \odot \text{exp}(\mathbf{w}) \propto \sigma(\mathbf{m}) \odot \sigma(\mathbf{w})$$
 
@@ -172,7 +172,7 @@ $$\sigma(\mathbf{e}) \propto \text{exp}(\mathbf{e}) = \text{exp}(\mathbf{m} + \m
   - [Clark et al., (2020)](https://www.aclweb.org/anthology/2020.findings-emnlp.272/) went with the PoE loss.  
   - [Sanh et al., (2020)](https://openreview.net/forum?id=Hf3qXoiNkR) also added the cross entropy loss.  
 - In PoE: $\textbf{m}$ can *correct for* the mistakes of $\textbf{w}$.  
-  - At the correct "target" (e.g., $j=0$): if $\mathbf{m}_0$ is small, then $\mathbf{w}_0$ should be large to compensate. Vice versa for the incorrect target (e.g., $j\neq 0$). 
+  - At the correct "target" (e.g., $j=0$): if $\mathbf{w}_0$ is small, then $\mathbf{m}_0$ should be large to compensate. Vice versa for the incorrect target (e.g., $j\neq 0$). 
 
 
 
@@ -227,6 +227,13 @@ Evaluate with **Linguistic Bias Score (LBS)**
 Larger corpus helps RoBERTa "learn more quickly" from the disambiguating data.  
 
 ![height:250px](res/6_shortcut/Warstadt2020_fig3.png)
+
+
+---
+# Feature extractability vs. data needed in inoculation
+(in `4_probing`) [Lovering et al., (2021)](https://openreview.net/forum?id=mNtmhaDkAr):  
+- When a feature is harder to extract (by probing methods):  
+- More disambiguating data ("evidence") is needed to learn to generalize this feature.  
 
 
 
