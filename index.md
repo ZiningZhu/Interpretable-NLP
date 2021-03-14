@@ -77,21 +77,11 @@ Anyone interested in doing Interpretable NLP e.g., in [SPOC lab](https://twitter
       - Train LMs on larger data.  
   
 
-8. **Topic: Influence of samples, understanding the datasets**  
-    - Saliency maps: how does each data sample affect the model predictions? (Hard to compute)  
-    - Influence function: which sample would change the prediction the most, if removed?  
-      - Understanding Black-box Predictions via Influence Functions [(Koh and Liang, 2017)](https://arxiv.org/abs/1703.04730)  
-      - Understanding the Origin of Bias in Word Embeddings [(Brunet et al., 2019)](https://arxiv.org/abs/1810.03611)  
-      - Explaining Black Box Predictions and Unveiling Data Artifacts with Influence Functions [(Han et al., 2020)](https://arxiv.org/abs/2005.06676)  
-    - Adversarial explanations:  
-      - Input perturbation: what will the model predict if we replace this input word?  
-      - Input marginalization [(Kim et al., 2020)](https://arxiv.org/abs/2010.13984)  
-      - Adversarial Examples Are Not Bugs; They Are Features [(Ilyas et al., 2019)](https://papers.nips.cc/paper/2019/hash/e2c420d928d4bf8ce0ff2ec19b371514-Abstract.html)  
-    - Which decision rules / "anchors" trigger the prediction? E.g., Anchors [(Ribeiro et al., 2018)](https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16982/15850), and Universal adversarial triggers [(Wallace et al., 2019)](https://arxiv.org/abs/1908.07125)  
-    - Other methods to understand the datasets:  
-      - Dataset Cartography: Mapping and Diagnosing Datasets with Training Dynamics [(Swayamdipta et al., 2020)](https://www.aclweb.org/anthology/2020.emnlp-main.746/)  
-      - With Little Power Comes Great Responsibility [(Card et al., 2020)](https://arxiv.org/abs/2010.06595)  
-      - Distributed Shapley [(Ghorbani et al., 2020)](https://arxiv.org/pdf/2002.12334.pdf) ([blog](https://hai.stanford.edu/blog/quantifying-value-data), and a less technical version on [arxiv](https://arxiv.org/pdf/1904.02868.pdf))  
+8. **Topic: Influence of samples, understanding the datasets (March 9, 2021)**  
+   - Perturbing the samples  
+   - Influence functions  
+   - Anchors, features, and adversarial examples
+   - Studying the datasets
 
 
 9.  **Topic: Rationales in classification**  
