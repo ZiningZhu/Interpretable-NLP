@@ -77,7 +77,7 @@ Anyone interested in doing Interpretable NLP e.g., in [SPOC lab](https://twitter
       - Train LMs on larger data.  
   
 
-8. **Topic: Influence of samples, understanding the datasets (March 9, 2021)**  
+8. **Topic: Influence of samples, understanding the datasets (March 16, 2021)**  
    - Perturbing the samples  
    - Influence functions  
    - Anchors, features, and adversarial examples
