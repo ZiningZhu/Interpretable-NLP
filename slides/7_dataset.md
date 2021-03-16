@@ -34,9 +34,9 @@ Understanding Black-box Predictions via Influence Functions [(Koh and Liang, 201
 - Setup:  
   - Let us write data points as $z=\{x, y\}$  
   - Let $\hat{\theta}$ be the empirical risk minimizer: $\hat{\theta}_{z_{\text{train}}} = \text{min}_{\theta} \frac{1}{n} \Sigma_{i=1}^n L(z_i, \theta)$ 
-  - When we up-weigh a training point $z$, how is the loss impacted?
-  - Note that the loss is computed using $\hat{\theta}$.
-- Overall intuition: compute the **impacts** of data sample $z$.  
+  - When we up-weigh a training point $z$ by $\epsilon$, how is the loss $L$ impacted?
+  - Note that the loss is computed using $\hat{\theta}$, which is affected by the $\epsilon$-upweighed sample.
+- Overall intuition: approximate $\frac{dL}{d\epsilon}$.
 
 
 
@@ -84,7 +84,7 @@ Understanding the Origin of Bias in Word Embeddings [(Brunet et al., 2019)](http
 ---
 # Anchors
 [Ribeiro et al., (2018)](https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16982/15850) tried to find if-then rules that "anchor" the prediction locally.  
-- Define anchor $A$ as a rule (set of predicates; classifier inputs) such that:  
+- Define anchor $A$ as a rule (set of predicates) such that:  
   $A(x)$ returns 1 if all its feature predicates are true for instance $x$.  
 - To compute $A$ efficiently, formulate into a *combinatorial optimization* problem:  
   - Introduce a probabilistic definition: $P(\text{prec}(A)\geq \tau) \geq 1-\delta$  
@@ -127,6 +127,7 @@ Method: Process the original dataset $\mathcal{D}$ based on the trained robust m
     For (x,y) in D:
         Sample another x' from D
         x_R := argmin_z ||g_R(z) - g_R(x)||_2  # where each component of z is binary.
+        # Solved with normalized gradient descent starting from x'
         Add (x_R, y) to the D_R set
     Return D_R
 
@@ -182,14 +183,14 @@ Given training set $\mathcal{T}$, synthesize a small set of informative samples 
 
 1. Train $\theta^T$ on $\mathcal{T}$. Train $\theta^S$ on $\mathcal{S}$. 
 2. Select $\mathcal{S}$ to minimize $D(\theta^T, \theta^S)$.  
-  How? Propose two methods: parameter matching (2.2) and gradient matching (2.3)  
+  How? Propose two methods: parameter matching and gradient matching  
 3. Repeat the above steps until stopping conditions.  
 
-Promising results compared to Coreset methods.  
+Promising results compared to traditional dataset selection ("coreset") methods.  
 
 ---
 # Summary
 - Perturbing the samples  
 - Influence functions  
-- Anchors, features, and adversarial examples
-- Studying the datasets 
+- Anchors, features, and adversarial examples  
+- Studying & refining the datasets  
