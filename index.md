@@ -13,7 +13,7 @@ Anyone interested in doing Interpretable NLP e.g., in [SPOC lab](https://twitter
 - Location: [Zoom](https://utoronto.zoom.us/meeting/register/tZMlcOCpqjIuHNeGNTZOnFJc0b0zV3O9_ikL)  
 - Discussion: [GitHub issues](https://github.com/ZiningZhu/Interpretable-NLP/issues)  
 - Slides: [OneDrive](https://tinyurl.com/interpretable-nlp-slides)  
-- Recorded sessions in 2020: [YouTube playlist](https://youtube.com/playlist?list=PLJkk2REOquyujnnaI2MXVU6kPCNtnp3aN)  
+- Recorded sessions in 2021: [YouTube playlist](https://youtube.com/playlist?list=PLJkk2REOquyujnnaI2MXVU6kPCNtnp3aN)  
 
 
 ## Tentative Topics  
