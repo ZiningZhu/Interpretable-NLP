@@ -12,8 +12,8 @@ Anyone interested in doing Interpretable NLP e.g., in [SPOC lab](https://twitter
 - Time: Tuesdays 9:00-10:00 ET (Toronto time)  
 - Location: [Zoom](https://utoronto.zoom.us/meeting/register/tZMlcOCpqjIuHNeGNTZOnFJc0b0zV3O9_ikL)  
 - Discussion: [GitHub issues](https://github.com/ZiningZhu/Interpretable-NLP/issues)  
-- Slides: [OneDrive](https://tinyurl.com/interpretable-nlp-slides)  
-- Recorded sessions in 2021: [YouTube playlist](https://youtube.com/playlist?list=PLJkk2REOquyujnnaI2MXVU6kPCNtnp3aN)  
+- Slides: [GitHub](https://github.com/ZiningZhu/Interpretable-NLP/tree/gh-pages/slides)  
+- Recorded sessions in 2021 winter: [YouTube playlist](https://youtube.com/playlist?list=PLJkk2REOquyujnnaI2MXVU6kPCNtnp3aN)  
 
 
 ## Tentative Topics  
@@ -107,6 +107,7 @@ Anyone interested in doing Interpretable NLP e.g., in [SPOC lab](https://twitter
 11. **Topic: Theoretical interpretations**  
     - RNNs as Weighted Language Recognizers [(Chen et al., 2018)](https://www.aclweb.org/anthology/N18-1205/)  
     - Theoretical Limitations of Self-attentions [(Hahn, 2020)](https://www.mitpressjournals.org/doi/full/10.1162/tacl_a_00306)  
+    - Self-attention networks can process bounded hierarchical language [(Yao et al., 2021)](https://arxiv.org/abs/2105.11115)  
     - A Formal Hierarchy of RNN Architectures [(Merrill et al., 2020)](https://arxiv.org/abs/2004.08500)  
     - Every Model Learned by Gradient Descent is Approximately a Kernel Machine [(Domingos, 2020)](https://arxiv.org/abs/2012.00152)  
     - Blog post: How to Stop Worrying about Compositionality? [(Herbelot, 2020)](https://thegradient.pub/how-to-stop-worrying-about-compositionality-2/)  
